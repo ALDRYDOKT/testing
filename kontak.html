@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Links</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('yrnm.jpg') center/cover;
+            color: white;
+            text-align: center;
+        }
+
+        .menu-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgba(0, 68, 255, 0);
+            border-radius: 10px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .menu-item {
+            width: 150px;
+            padding: 10px;
+            background-color: #0044ff00;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-bottom: 10px;
+        }
+
+        .menu-item:hover {
+            background-color: #ffffff71;
+        }
+
+        .menu-item img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .menu-item p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .description-container {
+            margin-left: 20px;
+            text-align: left;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu-container">
+        <h1>Social Media Links</h1>
+
+        <div class="menu-item" onclick="openLink('https://www.instagram.com/aldrydokt/')">
+            <img src="insta.png" alt="Instagram">
+            <p>Instagram</p>
+        </div>
+        <div class="menu-item" onclick="openLink('https://t.me/')">
+            <img src="tele.png" alt="Telegram">
+            <p>Telegram</p>
+        </div>
+        <div class="menu-item" onclick="openLink('https://wa.me/6283159784012')">
+            <img src="wa.png" alt="WhatsApp">
+            <p>WhatsApp</p>
+        </div>
+    </div>
+
+    <script>
+        function openLink(url) {
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
