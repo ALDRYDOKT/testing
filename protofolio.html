@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Gambar</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('beranda.jpg') center/cover;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+            max-width: 800px;
+            backdrop-filter: blur(10px);
+        }
+
+        .image-container {
+            position: relative;
+            overflow: hidden;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            max-width: 800px; /* Template lebar maksimum */
+            max-height: 400px; /* Template tinggi maksimum */
+            transition: transform 0.3s ease-in-out;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            transition: opacity 0.3s ease-in-out;
+            backdrop-filter: blur(5px);
+        }
+
+        .image-container:hover .image-overlay {
+            opacity: 1;
+        }
+
+        .image-overlay p {
+            margin: 0;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="gallery">
+    <div class="image-container">
+        <img src="RONALDO.png" alt="Gambar 1">
+        <div class="image-overlay">
+            <p>Design</p>
+        </div>
+    </div>
+
+    <div class="image-container">
+        <img src="game.jpg" alt="Gambar 2">
+        <div class="image-overlay">
+            <p>Games</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
